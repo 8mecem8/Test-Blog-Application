@@ -18,4 +18,10 @@ const putLike = (likeNum,config) => {
 
 }
 
-export default { getAll,postBlog,putLike }
+
+const delBlog = (id,config) => {
+  const request = axios.delete(`baseUrl/${id}`,config)
+  return request.then(response => { return response.data})
+}
+
+export default { getAll,postBlog,putLike,delBlog }
